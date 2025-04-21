@@ -13,29 +13,39 @@
         "passConfig": true,
         "paletteRect": "top: 50px; bottom: 10px; right: 10px; left: auto; width:400px; height: calc(100vh - 60px)"
       },  
-      {
-        "id": "google-assist",
-        "title": "Google Assist",
-        "environments": [ "edit","dev", "preview", "live", "prod"],
-        "url": "https://www.google.com/search?q=edge+delivery+services",
-        "isPalette": true,
-        "passConfig":true,
-        "passReferrer": true,
-        "excludePaths":[
-          "**/fr/**"
-        ],
-        "includePaths": [
-          "**.docx**",
-          "**/fr/blocks/**"
-        ],
-        "paletteRect": "top: 50px; bottom: 10px; right: 10px; left: auto; width:400px; height: calc(100vh - 60px)"
-      },
+  
       {
         "id": "library",
         "title": "Block Library",
         "environments": ["edit"],
         "url": "/tools/sidekick/library.html",
         "includePaths": ["**.docx**"]
+      },
+      
+      {
+        "id": "tools",
+        "title": "Tools",
+        "isContainer": true
+      },
+      {
+        "id": "medium",
+        "containerId": "tools",
+        "title": "medium",
+        "environments": [
+          "edit","dev"
+          ],
+        "url":"https://medium.com/@jaivyas80",
+        "passReferrer": true
+      },
+      {
+        "id": "youtube",
+        "containerId": "tools",
+        "title": "youtube",
+        "environments": [
+          "edit","dev"
+          ],
+        "url":"https://www.youtube.com/",
+        "passReferrer": true
       }
     ]
   }
