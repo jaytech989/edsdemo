@@ -68,7 +68,7 @@
         "id": "translate-hindi",
         "title": "Translate to Hindi",
         "environments": ["edit", "dev", "preview"],
-        "url": "https://script.google.com/macros/s/AKfycbwjjxP88gEM7E8Q9dFivdEASWYCnlwtrUz_dlEJhGUuDq-ICtf1Z_aAXkMmZsVGZ6EX/exec", 
+        "url": "https://script.google.com/macros/s/AKfycbwP6Q1_QC4vAjT4OLB8NUJ4l_JCJJBxA6edNFwlyrdJod7bVqN0iarw-ovENr9OrSw/exec", 
         "includePaths": ["**"], 
         "isPalette": false,
         "passConfig": true,
