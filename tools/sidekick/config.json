@@ -63,6 +63,16 @@
           ],
         "url":"https://www.youtube.com/",
         "passReferrer": true
+      },
+      {
+        "id": "translate-hindi",
+        "title": "Translate to Hindi",
+        "environments": ["edit", "dev", "preview"],
+        "url": "https://script.google.com/macros/s/AKfycbwjjxP88gEM7E8Q9dFivdEASWYCnlwtrUz_dlEJhGUuDq-ICtf1Z_aAXkMmZsVGZ6EX/exec", 
+        "includePaths": ["**"], 
+        "isPalette": false,
+        "passConfig": true,
+        "passReferrer": true
       }
     ]
   }
