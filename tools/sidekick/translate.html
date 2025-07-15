@@ -22,21 +22,24 @@
   <button onclick="triggerTranslation()">Translate Now</button>
   <p id="status"></p>
 
-
   <script>
     async function triggerTranslation() {
       const statusEl = document.getElementById('status');
       statusEl.textContent = '⏳ Translating...';
-
+  
       try {
         const response = await fetch('https://script.google.com/macros/s/AKfycbydd8MbqScG3iIzTQdaBDHkn2Tw1NbFVdQYaJmNJl8aQ0WDOixoOvMlZ0fyoNG3gx1g/exec', {
-          headers: { 'Content-Type': 'application/json' },
+          method: 'POST', // ✅ MUST be POST
+          headers: {
+            'Content-Type': 'application/json'
+          },
           body: JSON.stringify({
             html: '<p>Hello</p>',
             from: 'en',
             to: 'hi'
           })
         });
+  
         const result = await response.json();
         if (result.status === 'success') {
           statusEl.textContent = '✅ Document translated successfully!';
@@ -48,6 +51,7 @@
       }
     }
   </script>
+  
 </body>
 
 </html>
