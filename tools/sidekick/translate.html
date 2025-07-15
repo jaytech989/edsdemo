@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Translate Google Doc</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>📄 Translate Active Google Doc</h3>
+    <button onclick="triggerTranslation()">Translate Now</button>
+    <p id="status"></p>
+
+    <script>
+      async function triggerTranslation() {
+        const statusEl = document.getElementById('status');
+        statusEl.textContent = '⏳ Translating...';
+
+        try {
+          const response = await fetch('https://script.google.com/macros/s/AKfycbydd8MbqScG3iIzTQdaBDHkn2Tw1NbFVdQYaJmNJl8aQ0WDOixoOvMlZ0fyoNG3gx1g/exec', {
+            method: 'POST'
+          });
+          const result = await response.json();
+          if (result.status === 'success') {
+            statusEl.textContent = '✅ Document translated successfully!';
+          } else {
+            statusEl.textContent = `❌ Error: ${result.message}`;
+          }
+        } catch (err) {
+          statusEl.textContent = `❌ Failed to trigger translation: ${err.message}`;
+        }
+      }
+    </script>
+  </body>
+</html>

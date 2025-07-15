@@ -65,15 +65,15 @@
         "passReferrer": true
       },
       {
-        "id": "translate-hindi",
-        "title": "Translate to Hindi",
-        "environments": ["edit", "dev", "preview"],
-        "url": "https://script.google.com/macros/s/AKfycbwP6Q1_QC4vAjT4OLB8NUJ4l_JCJJBxA6edNFwlyrdJod7bVqN0iarw-ovENr9OrSw/exec", 
-        "includePaths": ["**"], 
-        "isPalette": false,
-        "passConfig": true,
-        "passReferrer": true
+        "id": "translate-google-docs",
+        "title": "Translate Docs",
+        "environments": ["edit", "preview", "prod"],
+        "isPalette": true,
+        "url": "tools/sidekick/translate.html",
+        "passReferrer": true,
+        "paletteRect": "top: 50px; bottom: 10px; right: 10px; left: auto; width: 400px; height: calc(100vh - 60px)"
       }
+      
     ]
   }
   
